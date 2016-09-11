@@ -27,11 +27,16 @@
 <div id="wrapper">
 
 <header>
-  footer
+  header
 </header><!-- /header -->
 
 <main role="main">
-  main
+
+  <div id="demo">
+    <p>{{message}}</p>
+    <input v-model="message">
+  </div>
+
 </main><!-- /main -->
 
 <footer>
@@ -40,5 +45,16 @@
 
 </div><!-- /#wrapper-->
 </body>
+<script src="../js/lib/vue.min.js" charset="utf-8"></script>
 <script src="../js/base.js" charset="utf-8"></script>
+<script>
+
+  var demo = new Vue({
+    el: '#demo',
+    data: {
+      message: 'Hello Vue.js!'
+    }
+  })
+
+</script>
 </html>
